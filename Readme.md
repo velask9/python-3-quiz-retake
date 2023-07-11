@@ -1,26 +1,26 @@
 # Python Quiz Coding Challenge
 
-## Weeks II & III
+ Weeks II & III
 
 ### Instructions
 1. Fork and clone this repository.
 2. Familiarize yourself with the file structure of this repository.
-3. Achieve the following objectives by carefully reading what is being asked and executing.
+3. Achieve the following objectives by ***carefully reading what is being asked and executing***.
 
 ### Objectives
 
-You are given a file named `users.txt`. Your goal is to validate that each user's username is unique.
+You are given a file named `users.txt`. Your goal is to find the user with the most rewards points.
 
 # Problem: Name checker
-Create a function called `validate_file()` (in `name_checker.py`) which accepts a name of a file to validate. This function validates the [users.txt](users.txt) file and **checks that the first name for each user does not contain any numbers (0123456789)**. This function raises (throws) a `ValidationException` object and is consumed in the following manner:
+Implement a function called `find_best_user()` (in `reward_check.py`) which accepts a name of a plain text file to validate. This function parses the [users.txt](users.txt) file and **finds the user with the highest REWARDS POINTS**. 
+
+**find_best_user() returns the first name of the user with the highest rewards points.** This function is consumed in the following manner:
 
 Test Case:
 ```python
 def test():
-    try:
-        validate_file("users.txt")
-    except ValidationException as ve:
-        print(ve)
+    result = find_best_user("users.txt")
+    print(f"Congratulations {result}! You have a lot of rewards points, would you like to spend them?")
 
 test()
 ```
